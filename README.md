@@ -9,13 +9,13 @@ Changhong Fu∗, Yiheng Wang, Liangliang Yao, Guangze Zheng, Haobo Zuo and Jia P
 
 <!-- Prerequisite-->
 ## :hammer_and_wrench: Installation
-### Test Prerequisite
+### 1. Test Prerequisite
 This code has been tested on Ubuntu 18.04, Python 3.8.3, Pytorch 0.7.0/1.6.0, CUDA 10.2.  
 Please install related libraries before running this code: 
 ```bash
 pip install -r requirements.txt
 ```
-### Train Prerequisite
+### 2. Train Prerequisite
 To train TDA-Track, more libraries are needed to obtain training samples from nighttime raw videos. More details can be found on [NetTrack](https://github.com/George-Zhuang/NetTrack).
   
 ## 🚀 Get started
@@ -48,7 +48,7 @@ To train the model, run `train.py` with the desired configs:
 to be completed...
   
 
-## :NUT2024-40L dataset
+## NUT2024-40L dataset
 <!-- release the dataset demo-->
 - 📊 Long-term Nighttime UAV Tracking (**NUT2024-40L**) Benchmark:
   - 🎬40 videos shot by UAV in various scenarios at night 
