@@ -29,17 +29,20 @@ python eval.py 	                          \
 ```
 
 ### Train TDA-Track
-#### Download training datasets
-
-Download the datasets：
+#### 1. Download training datasets
+Download the daytime tracking datasets：
 * [VID](http://image-net.org/challenges/LSVRC/2017/)
 * [GOT-10K](http://got-10k.aitestunion.com/downloads)
-  
-#### Preprocessing phase
+Note: train_dataset/dataset_name/readme.md has listed detailed operations about how to generate training datasets.
+
+Download the nighttime tracking datasets：
+* [NAT2021](https://vision4robotics.github.io/NAT2021)
+Note: NAT2021-train set is unannotated, the training samples are obtained with the prompt-driven object mining approach, as presented in [Preprocessing](#Preprocessing phase)
+#### 2. Preprocessing phase
 
 Preprocessing please refer to ... to be completed...
 
-#### Training phase
+#### 3. Training phase
 To train the model, run `train.py` with the desired configs:
 to be completed...
   
