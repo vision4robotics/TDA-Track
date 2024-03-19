@@ -4,10 +4,35 @@ Changhong Fu∗, Yiheng Wang, Liangliang Yao, Guangze Zheng, Haobo Zuo and Jia P
 
 ## 📣 News
 - [2024/03/19] 💻 Code has been released.
-- [2024/03/01] 📰 NetTrack has been accepted by **CVPR 2024**.
 
-<!-- NetTrack-->
-## :hammer_and_wrench: Install 
+<!-- test, evaluation and train-->
+## 🚀 Get started
+### Quick test and evaluation
+The tracking results of NUT-40L, NUT-60L, NUT-100L will be provided soon. If you want to evaluate the tracker, please put those results into  `results` directory.
+```
+python eval.py 	                          \
+	--tracker_path ./results          \ # result path
+	--dataset UAV10                   \ # dataset_name
+	--tracker_prefix 'result'   # tracker_name
+```
+
+### Train TDA-Track
+#### Download training datasets
+
+Download the datasets：
+* [VID](http://image-net.org/challenges/LSVRC/2017/)
+* [GOT-10K](http://got-10k.aitestunion.com/downloads)
+  
+#### Preprocessing phase
+
+Preprocessing please refer to ... to be completed...
+
+#### Training phase
+To train the model, run `train.py` with the desired configs:
+to be completed...
+  
+<!-- Prerequisite-->
+## :hammer_and_wrench: Installation
 
 - **Prerequisite**
   ```bash
@@ -52,16 +77,6 @@ Changhong Fu∗, Yiheng Wang, Liangliang Yao, Guangze Zheng, Haobo Zuo and Jia P
   - Download with [AliPan](https://www.alipan.com/s/NFkpgDDw6R3)
       ```Due to policy limitations of Alipan, please run the .exe file directly to decompress data.```
 
-
-## 🚀 Get started
-- Run default demo video. 
-  ```bash
-  sh tools/demo/demo_seq.sh
-  ```
-  The results will be shown in ```./output/track_res```.
-
-- Evaluate
-  Please ref to [```./docs/evalutate.md```](./docs/evaluate.md).
 
 ## 🎞️ Video
 Watch our video on YouTube!
