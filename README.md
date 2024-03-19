@@ -6,6 +6,19 @@ Changhong Fu∗, Yiheng Wang, Liangliang Yao, Guangze Zheng, Haobo Zuo and Jia P
 - [2024/03] 💻 Code will be released soon.
 
 <!-- test, evaluation and train-->
+
+<!-- Prerequisite-->
+## :hammer_and_wrench: Installation
+
+- **Test Prerequisite**
+  This code has been tested on Ubuntu 18.04, Python 3.8.3, Pytorch 0.7.0/1.6.0, CUDA 10.2.
+  Please install related libraries before running this code: 
+  ```bash
+  pip install -r requirements.txt
+  ```
+- **Train Prerequisite**
+  To train TDA-Track, more libraries are needed to obtain training samples from nighttime raw videos. More details can be found on [NetTrack](https://github.com/George-Zhuang/NetTrack).
+  
 ## 🚀 Get started
 ### Quick test and evaluation
 The tracking results of NUT2024-40L, NUT2024-60L, NUT2024-100L will be provided soon. If you want to evaluate the tracker, please put those results into  `results` directory.
@@ -31,37 +44,6 @@ Preprocessing please refer to ... to be completed...
 To train the model, run `train.py` with the desired configs:
 to be completed...
   
-<!-- Prerequisite-->
-## :hammer_and_wrench: Installation
-
-- **Prerequisite**
-  ```bash
-  conda create -n nettrack python=3.10 # please use the default version
-  pip3 install torch torchvision # --index-url https://download.pytorch.org/whl/cu121
-  pip3 install -r requirements.txt
-  pip3 install cython; pip3 install 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
-  pip3 install cython_bbox
-  sudo apt update
-  sudo apt install ffmpeg
-  ```
-
-  Install Grounding DINO and CoTracker:
-  ```bash
-  pip install git+https://github.com/IDEA-Research/GroundingDINO.git
-  pip install git+https://github.com/facebookresearch/co-tracker.git@8d364031971f6b3efec945dd15c468a183e58212
-  ```
-
-- **Prepare weights:**
-  Download the default pretrained Grouding DINO and CoTracker model:
-  ```bash
-  cd weights
-  cd groundingdino
-  wget https://huggingface.co/ShilongLiu/GroundingDINO/resolve/main/groundingdino_swinb_cogcoor.pth
-  cd ..
-  mkdir cotracker && cd cotracker
-  wget https://dl.fbaipublicfiles.com/cotracker/cotracker_stride_4_wind_8.pth
-  cd ..
-  ```
 
 ## :NUT2024-40L dataset
 <!-- release the dataset demo-->
