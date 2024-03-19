@@ -10,7 +10,7 @@ Changhong Fu∗, Yiheng Wang, Liangliang Yao, Guangze Zheng, Haobo Zuo and Jia P
 <!-- Prerequisite-->
 ## :hammer_and_wrench: Installation
 ### Test Prerequisite
-This code has been tested on Ubuntu 18.04, Python 3.8.3, Pytorch 0.7.0/1.6.0, CUDA 10.2.
+This code has been tested on Ubuntu 18.04, Python 3.8.3, Pytorch 0.7.0/1.6.0, CUDA 10.2.  
 Please install related libraries before running this code: 
 ```bash
 pip install -r requirements.txt
@@ -20,7 +20,8 @@ To train TDA-Track, more libraries are needed to obtain training samples from ni
   
 ## 🚀 Get started
 ### Quick test and evaluation
-The tracking results of NUT2024-40L, NUT2024-60L, NUT2024-100L will be provided soon. If you want to evaluate the tracker, please put those results into  `results` directory.
+The tracking results of NUT2024-40L, NUT2024-60L, NUT2024-100L will be provided soon.  
+If you want to evaluate the tracker, please put those results into  `results` directory.
 ```
 python eval.py 	                          \
 	--tracker_path ./results          \ # result path
@@ -32,11 +33,11 @@ python eval.py 	                          \
 #### 1. Download training datasets
 Download the daytime tracking datasets：
 * [VID](http://image-net.org/challenges/LSVRC/2017/)
-* [GOT-10K](http://got-10k.aitestunion.com/downloads)
+* [GOT-10K](http://got-10k.aitestunion.com/downloads)  
 Note: train_dataset/dataset_name/readme.md has listed detailed operations about how to generate training datasets.
 
 Download the nighttime tracking datasets：
-* [NAT2021](https://vision4robotics.github.io/NAT2021)
+* [NAT2021](https://vision4robotics.github.io/NAT2021)  
 Note: NAT2021-train set is unannotated, the training samples are obtained with the prompt-driven object mining approach, as presented in [Preprocessing](#Preprocessing phase)
 #### 2. Preprocessing phase
 
