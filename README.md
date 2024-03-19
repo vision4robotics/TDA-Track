@@ -19,7 +19,7 @@ pip install -r requirements.txt
 To train TDA-Track, more libraries are needed to obtain training samples from nighttime raw videos. More details can be found on [NetTrack](https://github.com/George-Zhuang/NetTrack).
   
 ## 🚀 Get started
-### Quick test and evaluation
+### 1. Quick test and evaluation
 The tracking results of NUT2024-40L, NUT2024-60L, NUT2024-100L will be provided soon.  
 If you want to evaluate the tracker, please put those results into  `results` directory.
 ```
@@ -29,8 +29,8 @@ python eval.py 	                          \
 	--tracker_prefix 'result'   # tracker_name
 ```
 
-### Train TDA-Track
-#### 1. Download training datasets
+### 2. Train TDA-Track
+#### - Download training datasets
 Download the daytime tracking datasets：
 * [VID](http://image-net.org/challenges/LSVRC/2017/)
 * [GOT-10K](http://got-10k.aitestunion.com/downloads)  
@@ -39,11 +39,11 @@ Note: train_dataset/dataset_name/readme.md has listed detailed operations about 
 Download the nighttime tracking datasets：
 * [NAT2021](https://vision4robotics.github.io/NAT2021)  
 Note: NAT2021-train set is unannotated, the training samples are obtained with the prompt-driven object mining approach, as presented in [Preprocessing](#Preprocessing phase)
-#### 2. Preprocessing phase
+#### - Preprocessing phase
 
 Preprocessing please refer to ... to be completed...
 
-#### 3. Training phase
+#### - Training phase
 To train the model, run `train.py` with the desired configs:
 to be completed...
   
