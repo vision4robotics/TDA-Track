@@ -1,0 +1,9 @@
+2024-03-19 17:18:23.183 | INFO     | __main__:<module>:62 - Tracker model loaded.
+2024-03-19 17:18:57.673 | INFO     | __main__:<module>:62 - Tracker model loaded.
+2024-03-19 17:18:57.679 | INFO     | __main__:<module>:98 - Start tracking sequence: 0000box1.
+2024-03-19 17:23:44.250 | INFO     | __main__:<module>:62 - Tracker model loaded.
+2024-03-19 17:23:44.256 | INFO     | __main__:<module>:98 - Start tracking sequence: 0000box1.
+2024-03-19 17:25:23.074 | INFO     | __main__:<module>:62 - Tracker model loaded.
+2024-03-19 17:25:23.079 | INFO     | __main__:<module>:98 - Start tracking sequence: 0000box1.
+2024-03-19 17:28:00.071 | INFO     | __main__:<module>:62 - Tracker model loaded.
+2024-03-19 17:28:00.076 | INFO     | __main__:<module>:98 - Start tracking sequence: 0000box1.
