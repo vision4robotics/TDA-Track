@@ -1,10 +1,15 @@
 # 🏃‍♀️TDA-Track: Prompt-Driven Temporal Domain Adaptation for Nighttime UAV Tracking
 Changhong Fu∗, Yiheng Wang, Liangliang Yao, Guangze Zheng, Haobo Zuo and Jia Pan
-* Corresponding author.
+\* Corresponding author.
 
 ## 📣 News
-- [2024/03] 💻 Code will be released soon.
+- [2024/03] 💻 Code has been released.
+- 
+## Abstract
+> Nighttime UAV tracking has achieved great progress by domain adaptation (DA) under low-illuminated scenarios. However, previous DA works are defcient in narrowing the discrepancy of temporal contexts for UAV trackers. To address the issue, this work proposes a prompt-driven temporal domain adaptation framework to fully utilize temporal contexts for challenging nighttime UAV tracking, i.e., TDA-Track. Specifcally, the proposed framework aligns the distribution of temporal contexts from different domains by training the temporal feature generator against the discriminator. The temporal-consistent discriminator progressively extracts shared domain-specifc features to generate coherent domain discrimination results in the time series. Additionally, to obtain high-quality training samples, a prompt-driven object miner is employed to precisely locate objects in unannotated nighttime videos. Moreover, a new benchmark for nighttime UAV tracking is constructed. Exhaustive evaluations of TDATrack demonstrate remarkable performance on both public and self-constructed benchmarks. Real-world tests also show its practicality. The code and demo videos are available here.
 
+## 🎞️ Video Demo 
+[![TDA-Track: Prompt-Driven Temporal Domain Adaptation for Nighttime UAV Tracking]](https://youtu.be/mmLlPr3iiv4 "TDA-Track: Prompt-Driven Temporal Domain Adaptation for Nighttime UAV Tracking")
 <!-- test, evaluation and train-->
 
 <!-- Prerequisite-->
