@@ -1,8 +1,9 @@
 # 🏃‍♀️TDA-Track: Prompt-Driven Temporal Domain Adaptation for Nighttime UAV Tracking
-Changhong Fu∗, Yiheng Wang, Liangliang Yao, Guangze Zheng, Haobo Zuo and Jia Pan
+Changhong Fu∗, Yiheng Wang, Liangliang Yao, Guangze Zheng, Haobo Zuo, and Jia Pan
 \* Corresponding author.
 
 ## 📣 News
+- [2024/10] 💻 NAT2024-1 benchmark and TDA-Track checkpoint have been released.
 - [2024/03] 💻 Code has been released.
   
 ## Abstract
