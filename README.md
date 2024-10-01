@@ -24,9 +24,10 @@ To train TDA-Track, more libraries are needed to obtain training samples from ni
   
 ## 🚀 Get started
 ### 1. Quick test and evaluation
-To test on NAT2024-1 and NUT_L, you need to download them from the following links:
-[NAT2024-1](https://pan.baidu.com/s/1poS9XNVEnd7ObokJdRkJuQ), password: 6hpb
-[NUT_L](https://pan.baidu.com/share/init?surl=KWYp5UHflFuaPiWLFZvaKw&pwd=t4tr)
+The checkpoint is available [here](https://pan.baidu.com/s/1gK2r_V1DMdJNKqGTfeMRew), password: djp8.
+To test on NAT2024-1 and NUT_L benchmarks, you need to download them from the following links:
+*[NAT2024-1](https://pan.baidu.com/s/1poS9XNVEnd7ObokJdRkJuQ), password: 6hpb
+*[NUT_L](https://pan.baidu.com/share/init?surl=KWYp5UHflFuaPiWLFZvaKw&pwd=t4tr)
 ```
 python test.py
 ```
