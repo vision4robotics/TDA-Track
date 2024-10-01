@@ -6,7 +6,7 @@ Changhong Fu∗, Yiheng Wang, Liangliang Yao, Guangze Zheng, Haobo Zuo and Jia P
 - [2024/03] 💻 Code has been released.
   
 ## Abstract
-> Nighttime UAV tracking has achieved great progress by domain adaptation (DA) under low-illuminated scenarios. However, previous DA works are defcient in narrowing the discrepancy of temporal contexts for UAV trackers. To address the issue, this work proposes a prompt-driven temporal domain adaptation framework to fully utilize temporal contexts for challenging nighttime UAV tracking, i.e., TDA-Track. Specifcally, the proposed framework aligns the distribution of temporal contexts from different domains by training the temporal feature generator against the discriminator. The temporal-consistent discriminator progressively extracts shared domain-specifc features to generate coherent domain discrimination results in the time series. Additionally, to obtain high-quality training samples, a prompt-driven object miner is employed to precisely locate objects in unannotated nighttime videos. Moreover, a new benchmark for nighttime UAV tracking is constructed. Exhaustive evaluations of TDA-Track demonstrate remarkable performance on both public and self-constructed benchmarks. Real-world tests also show its practicality. The code and demo videos are available here.
+> Nighttime UAV tracking has achieved great progress by domain adaptation (DA) under low-illuminated scenarios. However, previous DA works are defcient in narrowing the discrepancy of temporal contexts for UAV trackers. To address the issue, this work proposes a prompt-driven temporal domain adaptation framework to fully utilize temporal contexts for challenging nighttime UAV tracking, i.e., TDA-Track. Specifically, the proposed framework aligns the distribution of temporal contexts from different domains by training the temporal feature generator against the discriminator. The temporal-consistent discriminator progressively extracts shared domain-specifc features to generate coherent domain discrimination results in the time series. Additionally, to obtain high-quality training samples, a prompt-driven object miner is employed to precisely locate objects in unannotated nighttime videos. Moreover, a new benchmark for nighttime UAV tracking is constructed. Exhaustive evaluations of TDA-Track demonstrate remarkable performance on both public and self-constructed benchmarks. Real-world tests also show its practicality. The code and demo videos are available here.
 
 ## 🎞️ Video Demo 
 [![TDA-Track: Prompt-Driven Temporal Domain Adaptation for Nighttime UAV Tracking](https://res.cloudinary.com/marcomontalbano/image/upload/v1713340462/video_to_markdown/images/youtube--mmLlPr3iiv4-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/mmLlPr3iiv4 "TDA-Track: Prompt-Driven Temporal Domain Adaptation for Nighttime UAV Tracking")
@@ -15,17 +15,22 @@ Changhong Fu∗, Yiheng Wang, Liangliang Yao, Guangze Zheng, Haobo Zuo and Jia P
 <!-- Prerequisite-->
 ## :hammer_and_wrench: Installation
 ### 1. Test Prerequisite
-This code has been tested on Ubuntu 18.04, Python 3.8.3, Pytorch 0.7.0/1.6.0, CUDA 10.2.  
-Please install related libraries before running this code: 
+Please install related libraries: 
 ```bash
-pip install -r requirements.txt
+pip install -r requirement.txt
 ```
 ### 2. Train Prerequisite
 To train TDA-Track, more libraries are needed to obtain training samples from nighttime raw videos. More details can be found on [NetTrack](https://github.com/George-Zhuang/NetTrack).
   
 ## 🚀 Get started
 ### 1. Quick test and evaluation
-The tracking results of NUT2024-40L, NUT2024-60L, NUT2024-100L will be provided soon.  
+To test on NAT2024-1 and NUT_L, you need to download them from the following links:
+NAT2024-1：https://pan.baidu.com/s/1poS9XNVEnd7ObokJdRkJuQ (password = 6hpb)
+NUT_L: https://pan.baidu.com/share/init?surl=KWYp5UHflFuaPiWLFZvaKw&pwd=t4tr
+```
+python test.py
+```
+You can find the tracking results of NAT2024-1, NUT_L in `results.zip` file.
 If you want to evaluate the tracker, please put those results into  `results` directory.
 ```
 python eval.py 	                          \
@@ -60,7 +65,7 @@ to be completed...
   - 🎯collected for artifical intelligence research
   
 - 📥 Download **NUT2024-40L dataset**
-  - To be released
+  - [Baidu Disk](https://pan.baidu.com/s/1poS9XNVEnd7ObokJdRkJuQ (password = 6hpb))
 
 <!-- release the tracking demos -->
 
