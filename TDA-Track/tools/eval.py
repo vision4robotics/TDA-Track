@@ -9,13 +9,13 @@ import argparse
 from glob import glob
 from tqdm import tqdm
 from multiprocessing import Pool
-from toolkit.datasets import NUT2024_40LDataset, NUT2024_60LDataset, NUT2024_100LDataset
+from toolkit.datasets import NAT2024_Dataset, NUT_LDataset, NAT2021_Dataset, DarkTrack2021_Dataset, UAVDark135_Dataset
 from toolkit.evaluation import OPEBenchmark
 
 parser = argparse.ArgumentParser(description='tracking evaluation')
 parser.add_argument('--tracker_path', '-p', type=str,default='./results', 
                     help='tracker result path')
-parser.add_argument('--dataset', '-d', type=str,default='', # NUT2024-40L, NUT2024-60L, NUT2024-60L
+parser.add_argument('--dataset', '-d', type=str,default='', 
                     help='dataset name')
 parser.add_argument('--num', '-n', default=24, type=int,
                     help='number of thread to eval')
@@ -40,15 +40,19 @@ def main():
     root = os.path.join(root, args.dataset)
 
 
-    if '40L' in args.dataset:
-        dataset = NUT2024_40LDataset(args.dataset, root)
-    elif '60L' in args.dataset:
-        dataset = NUT2024_60LDataset(args.dataset, root)
-    elif '100L' in args.dataset:
-        dataset = NUT2024_100LDataset(args.dataset, root)
+    if 'NAT2024' in args.dataset:
+        dataset = NAT2024_Dataset(args.dataset, root)
+    elif 'NUT' in args.dataset:
+        dataset = NUT_LDataset(args.dataset, root)
+    elif 'NAT2021' in args.dataset:
+        dataset = NAT2021_Dataset(args.dataset, root)
+    elif 'UAVDark135' in args.dataset:
+        dataset = UAVDark135_Dataset(args.dataset, root)
+    elif 'DarkTrack2021' in args.dataset:
+        dataset = DarkTrack2021_Dataset(args.dataset, root)
     else:
         raise("unknown dataset")
-
+    
     dataset.set_tracker(tracker_dir, trackers)
     benchmark = OPEBenchmark(dataset)
     # calculate success
