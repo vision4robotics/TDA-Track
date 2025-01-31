@@ -1,6 +1,8 @@
-from .nut2024_40l import NUT2024_40LDataset
-from .nut2024_60l import NUT2024_60LDataset
-from .nut2024_100l import NUT2024_100LDataset
+from .nat2024_1 import NAT2024_Dataset
+from .nut_l import NUT_LDataset
+from .nat2021 import NAT2021_Dataset
+from .darktrack2021 import DarkTrack2021_Dataset
+from .uavdark135 import UAVDark135_Dataset
 
 
 class DatasetFactory(object):
@@ -16,12 +18,16 @@ class DatasetFactory(object):
         """
         assert 'name' in kwargs, "should provide dataset name"
         name = kwargs['name']
-        if '40' in name:
-            dataset = NUT2024_40LDataset(**kwargs)
-        elif '60' in name:
-            dataset = NUT2024_60LDataset(**kwargs)
-        elif '100' in name:
-            dataset = NUT2024_100LDataset(**kwargs)
+        if 'NAT2021' in name:
+            dataset = NAT2021_Dataset(**kwargs)
+        elif 'DarkTrack2021' in name:
+            dataset = DarkTrack2021_Dataset(**kwargs)
+        elif 'UAVDark135' in name:
+            dataset = UAVDark135_Dataset(**kwargs)
+        elif 'NAT2024' in name:
+            dataset = NAT2024_Dataset(**kwargs)
+        elif 'NUT' in name:
+            dataset = NUT_LDataset(**kwargs)
         else:
             raise Exception("unknow dataset {}".format(kwargs['name']))
         return dataset

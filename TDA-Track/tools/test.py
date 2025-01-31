@@ -21,9 +21,11 @@ from toolkit.datasets import DatasetFactory
 
 
 parser = argparse.ArgumentParser(description='TDA-Track tracking')
-parser.add_argument('--dataset', default='',type=str,help='datasets, support NUT2024-40L, NUT2024-60L, and NUT2024-100L')
+parser.add_argument('--dataset', default='',type=str,help='datasets, support NAT2024, NUT-L')
 parser.add_argument('--tracker_name', default='TDA-Track', type=str, help='tracker name')
-parser.add_argument('--snapshot', default='./experiments/TDA-Track/tda-track.pth', type=str,help='snapshot of models to eval')
+parser.add_argument('--snapshot', 
+                    default='./experiments/TDA-Track/tda-track.pth', 
+                    type=str,help='snapshot of models to eval')
 parser.add_argument('--video', default='', type=str,help='eval one special video')
 parser.add_argument('--vis', default=False, action='store_true',help='whether visualzie result')
 args = parser.parse_args()
@@ -50,9 +52,9 @@ def main():
     cur_dir = os.path.dirname(os.path.realpath(__file__))
 
     dataset_root = os.path.join(cur_dir, '../test_dataset', args.dataset)
-    
 
     # create dataset
+    print(dataset_root)
     dataset = DatasetFactory.create_dataset(name=args.dataset,
                                             dataset_root=dataset_root,
                                             load_img=False)
@@ -104,6 +106,7 @@ def main():
         
         # save results
         model_path = os.path.join('results', args.dataset, model_name)
+        # model_path = os.path.join('results', args.dataset, model_name + '-e22')
         if not os.path.isdir(model_path):
             os.makedirs(model_path)
         result_path = os.path.join(model_path, '{}.txt'.format(video.name))
