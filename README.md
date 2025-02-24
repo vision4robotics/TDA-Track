@@ -63,13 +63,13 @@ To train the model, run `train.py` with the desired configs:
 to be completed...
   
 
-## NUT2024-40L dataset
+## NAT2024-1 dataset
 <!-- release the dataset demo-->
-- 📊 Long-term Nighttime UAV Tracking (**NUT2024-40L**) Benchmark:
+- 📊 Long-term Nighttime UAV Tracking (**NAT2024-1**) Benchmark:
   - 🎬40 videos shot by UAV in various scenarios at night 
   - 🎯collected for artifical intelligence research
   
-- 📥 Download **NUT2024-40L dataset**
+- 📥 Download **NAT2024-1 dataset**
   - [Baidu Disk](https://pan.baidu.com/s/1poS9XNVEnd7ObokJdRkJuQ (password = 6hpb))
 
 <!-- release the tracking demos -->
