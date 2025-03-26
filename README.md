@@ -1,6 +1,6 @@
 # 🏃‍♀️TDA-Track: Prompt-Driven Temporal Domain Adaptation for Nighttime UAV Tracking
 Changhong Fu∗, Yiheng Wang, Liangliang Yao, Guangze Zheng, Haobo Zuo, and Jia Pan
-\* Corresponding author.
+* Corresponding author.
 
 ## 📣 News
 - [2024/10] 💻 NAT2024-1 benchmark and TDA-Track checkpoint have been released.
@@ -40,8 +40,7 @@ If you want to evaluate the tracker, please put those results into  `results` di
 ```
 python eval.py 	                          \
 	--tracker_path ./results          \ # result path
-	--dataset UAV10                   \ # dataset_name
-	--tracker_prefix 'result'   # tracker_name
+	--dataset NAT2024                   \ # dataset_name
 ```
 
 ### 2. Train TDA-Track
@@ -55,12 +54,18 @@ Download the nighttime tracking datasets：
 * [NAT2021](https://vision4robotics.github.io/NAT2021)  
 Note: NAT2021-train set is unannotated, the training samples are obtained with the prompt-driven object mining approach, as presented in [Preprocessing](#Preprocessing phase)
 #### - Preprocessing phase
-
-Preprocessing please refer to ... to be completed...
+```
+cd preprocessing
+python tools/detect.py
+python tools/track.py
+```
 
 #### - Training phase
 To train the model, run `train.py` with the desired configs:
-to be completed...
+```
+cd TDA-Track
+python tools/train_tctrack_temporalda.py
+```
   
 
 ## NAT2024-1 dataset
